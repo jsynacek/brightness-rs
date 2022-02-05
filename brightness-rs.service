@@ -1,0 +1,9 @@
+[Unit]
+Description=Rusty brightness service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/brightness-rs
+
+[Install]
+WantedBy=multi-user.target

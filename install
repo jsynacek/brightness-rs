@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -x
+cargo build --release
+sudo install -o root ./target/release/brightness-rs /usr/local/bin/
+sudo install -o root brightness-rs.service /etc/systemd/system/
+sudo systemctl daemon-reload
